@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Controle de Estoque</h1>
+
+    <div class="card">
+        <input type="hidden" id="produtoId">
+        <div class="form-group">
+            <label>Nome do Produto:</label>
+            <input type="text" id="nome" placeholder="Ex: Teclado">
+        </div>
+        <div class="form-group">
+            <label>Preço (R$):</label>
+            <input type="number" id="preco" step="0.01" placeholder="0.00">
+        </div>
+        <div class="form-group">
+            <label>Quantidade:</label>
+            <input type="number" id="quantidade" placeholder="0">
+        </div>
+        <button onclick="salvar()" class="btn-save">Salvar Produto</button>
+        <button onclick="limparFormulario()" class="btn-clear">Limpar</button>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Qtd</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody id="tabelaProdutos">
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
